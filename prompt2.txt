@@ -1,0 +1,18 @@
+A LightSensor has a "value" between 0 and 1000 that denotes the ambient light brightness in the room.
+
+A Light is a, output device that has a PowerController and BrightnessController.
+A Fan is an output device that has a PowerController and PowerLevelController.
+A temperature sensor is an input device that has a TemperatureSensor.
+A light sensor is an input device that has a LightSensor.
+
+My room has a light LIGHT1 and a fan FAN1. It also has a temperature sensor C and a light sensor D.
+
+Output a JSON that has "target" field that identifies the device, an "controller" field that identifies the controller, a "name" field that identifies the property of the contoller and a "value" field that is the value of the property.
+
+I want the fan on when it is warm and off when it is cold. It is warm when temperature is greater than 70. When the fan is on set the value of the PowerLevelController proportional to the temperature.
+I want the light  "on" when it is dark and "off" when it is bright. It is dark if brightness is below 100. When the light is on, set the value of  BrightnessController inversely proportional to the ambient light. Otherwise set it to 0.
+
+Based on my question, generate a JSON that sets the output devices to the right state. 
+Respond in JSON only.
+
+[{"target":"C", "controller":"TemperatureSensor", "value":40}, {"target":"D", "controller":"LightSensor", value":150}]

@@ -1,0 +1,10 @@
+I want the temperature in my room to be 50 degrees. 
+I have a temperature sensor that gives me temperature in JSON. 
+I also have humidity sensor that gives me humidity in JSON.
+When i give you a JSON with a "temperature" field, respond with a JSON that has an "operation" field. 
+If the temperature is below 48 degrees and humidity is below 90, respond with an "operation" of "heat-on". 
+If the temperature is below 48 degrees and humidity is above 90, respond with an "operation" of "cool-on". 
+If the temperature is above 52 degrees, and humidity is less than 90 respond with an "operation" of "cool-on".  
+If the temperature is above 52 degrees, and humidity is greater than 90 respond with an "operation" of "heat-on".  
+If the temperature is between 48 and 50 ask me is I want to turn the heat on with a "question" field and only turn on the heat if I give a JSON with an "answer" field as "yes"
+Respond in JSON only.
