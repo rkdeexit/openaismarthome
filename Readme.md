@@ -1,1 +1,1 @@
-== Open AI based Smart Home ==
+-- Open AI based Smart Home --
